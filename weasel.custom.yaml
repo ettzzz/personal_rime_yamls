@@ -1,27 +1,39 @@
 patch:
   show_notifications_when: never         # 状态通知，适当，也可设为全开（always）全关（never）
   style:
-    name: ert_custom_light_mac
-    author: <ertenzdya2005@gmail.com>
-    horizontal: true                          # 水平排列
-    inline_preedit: true                      # 单行显示，false双行显示
-    candidate_format: '%c\u2005%@\u2005'            # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。 ## !NOT WORKING ON WINDOWS 10
-    corner_radius: 8                         # 候选条圆角
-    hilited_corner_radius: 3                  # 高亮圆角
-    border_height: 10                          # 窗口边界高度，大于圆角半径才生效
-    border_width: 10                           # 窗口边界宽度，大于圆角半径才生效
-    border_color_width: 3                      ## ALSO NOT WORKING
-    # font_face: "PingFangSC"                   # 候选词字体
+    color_scheme: ert_custom_light_mac
+    display_tray_icon: false
+    # font_face: "Microsoft YaHei"
     font_point: 20                            # 候选字词大小
     label_font_point: 20                      # 候选编号大小
-    text_color: 0xdedddd                      # 拼音行文字颜色，24位色值，16进制，BGR顺序
-    back_color: 0xffffff                      # 候选条背景色
-    label_color: 0xcd6403                     # 预选栏编号颜色
-    border_color: 0xffb266                    # 边框色
-    candidate_text_color: 0xcd6403            # 预选项文字颜色
-    hilited_text_color: 0x2b00ff              # 高亮拼音 (需要开启内嵌编码)
-    hilited_back_color: 0x2b00ff              # 高亮拼音 (需要开启内嵌编码)
-    hilited_candidate_text_color: 0x2b00ff    # 第一候选项文字颜色
-    hilited_candidate_back_color: 0xffffff    # 第一候选项背景背景色
-    hilited_candidate_label_color: 0x2b00ff   # 第一候选项编号颜色
-    comment_text_color: 0xdedddd   
+    horizontal: true
+    inline_preedit: true
+    label_format: "%s."
+    layout:
+      border_width: 1
+      candidate_spacing: 25
+      hilite_padding: 2
+      hilite_spacing: 4
+      margin_x: 12
+      margin_y: 20
+      min_height: 0
+      min_width: 160
+      round_corner: 4 ## not supported in 0.14.3
+      spacing: 10
+    preedit_type: composition
+  preset_color_schemes:
+    ert_custom_light_mac:
+      name: ert_custom_light_mac
+      author: <ertenzdya2005@gmail.com>
+      candidate_format: '%c\u2005%@\u2005'            # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间。 ## !NOT WORKING ON WINDOWS 10
+      text_color: 0xdedddd                      # 拼音行文字颜色，24位色值，16进制，BGR顺序
+      back_color: 0xffffff                      # 候选条背景色
+      label_color: 0xcd6403                     # 预选栏编号颜色
+      border_color: 0xff9933                    # 边框色
+      candidate_text_color: 0xcd6403            # 预选项文字颜色
+      hilited_text_color: 0x2b00ff              # 高亮拼音 (需要开启内嵌编码)
+      hilited_back_color: 0xffffff              # 高亮拼音 (需要开启内嵌编码)
+      hilited_candidate_text_color: 0x2b00ff    # 第一候选项文字颜色
+      hilited_candidate_back_color: 0xffffff    # 第一候选项背景背景色
+      hilited_candidate_label_color: 0x2b00ff   # 第一候选项编号颜色
+      comment_text_color: 0xdedddd
