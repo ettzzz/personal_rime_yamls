@@ -1,0 +1,16 @@
+---
+name: luna_pinyin.coding
+version: "0.1"
+sort: by_weight
+use_preset_vocabulary: true
+...
+
+git	git
+ls	ls
+cd	cd
+pwd	pwd
+docker	docker
+ps	ps
+bash	bash
+source	source
+rm	rm
