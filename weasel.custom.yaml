@@ -3,7 +3,7 @@ patch:
   style:
     color_scheme: ert_custom_light_mac
     display_tray_icon: false
-    # font_face: "Microsoft YaHei"
+    font_face: "Microsoft YaHei"
     font_point: 20                            # 候选字词大小
     label_font_point: 20                      # 候选编号大小
     horizontal: true
