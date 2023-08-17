@@ -59,6 +59,7 @@ speller:
     - derive/^([aoe])([ioun])$/O$1$2/
     # - xform/^([aoe])(ng)?$/$1$1$2/
     - xform/^([aoe])(ng)?$/O$1$2/
+    - xform/^er/OR/ ## sogou input for 'er'
     - xform/iu$/Q/
     - xform/[iu]a$/W/
     - xform/[uv]an$/R/
