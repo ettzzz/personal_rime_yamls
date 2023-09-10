@@ -4,7 +4,7 @@
 schema:
   schema_id: sogou_double_pinyin
   name: 搜狗双拼
-  version: "0.1"
+  version: "20230910"
   author:
     - 佛振 <chen.sst@gmail.com>
     - ert <ertenzdya2005@gmail.com>
@@ -43,6 +43,7 @@ engine:
   translators:
     - punct_translator
     - reverse_lookup_translator
+    - table_translator@custom_phrase
     - script_translator
   filters:
     - simplifier
@@ -59,10 +60,10 @@ speller:
     - derive/^([aoe])([ioun])$/O$1$2/
     # - xform/^([aoe])(ng)?$/$1$1$2/
     - xform/^([aoe])(ng)?$/O$1$2/
-    - xform/^er/OR/ ## sogou input for 'er'
     - xform/iu$/Q/
     - xform/[iu]a$/W/
     - xform/[uv]an$/R/
+    - xform/er$/OR/
     - xform/[uv]e$/T/
     # - xform/ing$|uai$/Y/
     - xform/ing$/;/
@@ -91,9 +92,12 @@ speller:
     #- abbrev/^(.).+$/$1/
 
 translator:
-  dictionary: luna_pinyin
+  # dictionary: luna_pinyin
+  dictionary: extended
   prism: sogou_double_pinyin
-  # preedit_format:
+  # contextual_suggestions: true
+  # max_homophones: 7
+  preedit_format:
     # - xform/([bpmnljqxy])n/$1in/
     # - xform/(\w)g/$1eng/
     # - xform/(\w)q/$1iu/
@@ -149,3 +153,11 @@ recognizer:
   import_preset: default
   patterns:
     reverse_lookup: "`[a-z]*'?$"
+
+custom_phrase:
+  dictionary: ""
+  user_dict: custom_phrase
+  db_class: stabledb
+  enable_completion: false
+  enable_sentence: true
+  initial_quality: 1
