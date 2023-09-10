@@ -1,0 +1,10 @@
+
+git	git
+ls	ls
+cd	cd
+pwd	pwd
+docker	docker
+ps	ps
+bash	bash
+source	source
+rm	rm

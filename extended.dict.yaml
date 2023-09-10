@@ -1,0 +1,20 @@
+---
+name: extended
+version: "20230910"
+sort: by_weight
+use_preset_vocabulary: true
+import tables:
+
+import_tables:
+  - dicts/simp
+  - dicts/simp-ext
+  - dicts/sogou_standard
+  - dicts/thuocl_animal # 动物
+  - dicts/thuocl_caijing # 财经
+  - dicts/thuocl_food # 饮食
+  - dicts/thuocl_idiom # 成语俗语
+  - dicts/thuocl_IT # IT
+  - dicts/thuocl_medical # 医学
+  - dicts/thuocl_renmingdiming # 人名地名
+
+...
