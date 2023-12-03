@@ -3,7 +3,6 @@ name: extended
 version: "20230910"
 sort: by_weight
 use_preset_vocabulary: true
-import tables:
 
 import_tables:
   - dicts/simp
